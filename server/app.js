@@ -7,7 +7,8 @@ const app = express();
 // Set up middleware
 // Fire graphqlHTTP everytime we hit endpoint /graphql, we use it as middleware here and it will handle graphQL request
 app.use('/graphql', graphqlHTTP({
-    schema: schema
+    schema,
+    graphiql: true
 }));
 
 app.listen(4000, () => {
